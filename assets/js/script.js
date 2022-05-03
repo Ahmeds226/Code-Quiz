@@ -42,6 +42,6 @@ let questions = [
   {
     title: "Which operator is used to assign a variable?",
     choices: ["*", "+", "=", "-"],
-    answer: "Document Object Model",
+    answer: "=",
   },
 ];
