@@ -1,0 +1,52 @@
+:root {
+  --white: #ffffff;
+  --red: #d0312d;
+  --black: #000;
+}
+
+.timer {
+  float: right;
+}
+
+.highscore {
+  float: left;
+}
+
+#nav {
+  display: block;
+  background-color: var(--white);
+  display: inline-block;
+  width: 95vw;
+  border-radius: 5px;
+  margin: 6px;
+}
+
+#nav :hover {
+  color: var(--red);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+#quizBody {
+  text-align: center;
+  padding: 10vh;
+}
+
+h2 {
+  padding: 10px 8px 10px 8px;
+  color: var(--black);
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+#quiz {
+  text-align: center;
+}
