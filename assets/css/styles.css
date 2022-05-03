@@ -47,6 +47,18 @@ a {
   color: var(--black);
 }
 
+button {
+  padding: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+button:hover {
+  background-color: var(--red);
+}
+
 #quiz {
   text-align: center;
 }
