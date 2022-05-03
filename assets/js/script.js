@@ -10,16 +10,6 @@ let questions = [
     answer: "JavaScript",
   },
   {
-    title: "How do you create a function in JavaScript?",
-    choices: [
-      "function = myFunction()",
-      "function myFunction()",
-      "function:myFunction()",
-      "(myFunction) = function",
-    ],
-    answer: "function = myFunction()",
-  },
-  {
     title: "How do you enter a comment in JS?",
     choices: [
       "//This is a comment",
@@ -30,6 +20,21 @@ let questions = [
     answer: "//This is a comment",
   },
   {
+    title: "How do you create a function in JavaScript?",
+    choices: [
+      "function = myFunction()",
+      "function myFunction()",
+      "function:myFunction()",
+      "(myFunction) = function",
+    ],
+    answer: "function = myFunction()",
+  },
+  {
+    title: "Which operator is used to assign a variable?",
+    choices: ["*", "+", "=", "-"],
+    answer: "=",
+  },
+  {
     title: "Arrays in Javascript can be used to store ____.",
     choices: [
       "numbers and strings",
@@ -38,10 +43,5 @@ let questions = [
       "all of the above",
     ],
     answer: "all of the above",
-  },
-  {
-    title: "Which operator is used to assign a variable?",
-    choices: ["*", "+", "=", "-"],
-    answer: "=",
   },
 ];
