@@ -2,8 +2,6 @@ let countdown = 0;
 let timer;
 let score = 0;
 let currentQuestion = -1;
-let playername = document.getElementById("name");
-let playerscores = "";
 
 // Questions:
 
@@ -109,7 +107,7 @@ function next() {
 function endGame() {
   clearInterval(timer);
 
-  let quizContent =
+  var quizContent =
     ` <h2>Game over!</h2>
 <h3>You got a ` +
     score +
@@ -118,34 +116,36 @@ function endGame() {
     score / 20 +
     ` questions correct!</h3>
 <input type="text" id="name" placeholder="Insert player name"> 
-<button onclick="submitScore()">Submit score!</button>`;
+<button onclick="submitPLayername(event)">Submit score!</button>`;
 
   document.getElementById("quizBody").innerHTML = quizContent;
 }
 
+function submitScore() {
+  console.log("test");
+}
 //submit and store the data in scores.html
 
 function submitPLayername(event) {
   event.preventDefault();
+  var userInput = document.getElementById("name").value.trim();
 
-  var userInput = playername.value.trim();
-
-  playerscore = quizContent + score;
+  //var playerscore = score;
+  console.log({ userInput, score });
 
   var ScoreBox = {
-    name: playername,
-    score: playerscore,
+    name: userInput,
+    score,
   };
   SaveData(ScoreBox);
-  window.location.href = "Code-Quiz/assets/html/scores.html";
+  window.location.href = "/assets/html/scores.html";
 }
 
 function SaveData(data) {
   let storage =
-    JSON.parse(localStorage.getItem("Code-Quiz/assets/html/scores.html")) || [];
+    JSON.parse(localStorage.getItem("/assets/html/scores.html")) || [];
   storage.push(data);
-  localStorage.setItem(
-    "Code-Quiz/assets/html/scores.html",
-    JSON.stringify(storage)
-  );
+  localStorage.setItem("/assets/html/scores.html", JSON.stringify(storage));
 }
+
+// Need to add a table to retrieve the data from scores.html
