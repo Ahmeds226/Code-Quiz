@@ -62,3 +62,14 @@ button:hover {
 #quiz {
   text-align: center;
 }
+
+/* Scores HTML */
+#highscoretitle {
+  color: var(--red);
+}
+
+#returntoquiz {
+  font-size: 20px;
+  color: var(--red);
+  background-color: var(--black);
+}

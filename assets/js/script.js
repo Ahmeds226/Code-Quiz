@@ -2,6 +2,10 @@ let countdown = 0;
 let timer;
 let score = 0;
 let currentQuestion = -1;
+let playername = document.getElementById("name");
+let playerscores = "";
+
+// Questions:
 
 let questions = [
   {
@@ -46,6 +50,9 @@ let questions = [
   },
 ];
 
+//Functions:
+//Start and timer:
+
 function startButton() {
   countdown = 100;
   document.getElementById("countdown").innerHTML = countdown;
@@ -61,64 +68,6 @@ function startButton() {
 
   next();
 }
-
-function endGame() {
-  clearInterval(timer);
-
-  let quizContent =
-    ` <h2>Game over!</h2>
-<h3>You got a ` +
-    score +
-    ` /100!</h3>
-<h3>That means you got ` +
-    score / 20 +
-    ` questions correct!</h3>
-<input type="text" id="name" placeholder="Insert player name"> 
-<button onclick="setScore()">Set score!</button>`;
-
-  document.getElementById("quizBody").innerHTML = quizContent;
-}
-
-function setScore() {
-  localStorage.setItem("highscore", score);
-  localStorage.setItem("highscoreName", document.getElementById("name").value);
-  getScore();
-}
-
-function getScore() {
-  let quizContent =
-    `
-<h2>` +
-    localStorage.getItem("highscoreName") +
-    `'s highscore is:</h2>
-<h1>` +
-    localStorage.getItem("highscore") +
-    `</h1>
-<button onclick="clearScore()">Clear score!</button><button onclick="resetGame()">Play Again!</button>`;
-  debugger;
-
-  document.getElementById("quizBody").innerHTML = quizContent;
-}
-
-function clearScore() {
-  localStorage.setItem("highscore", "");
-  localStorage.setItem("highscoreName", "");
-
-  resetGame();
-}
-
-function resetGame() {
-  clearInterval(timer);
-  score = 0;
-  currentQuestion = -1;
-  countdown = 0;
-  timer = null;
-
-  document.getElementById("countdown").innerHTML = countdown;
-
-  document.getElementById("quizBody").innerHTML = quizContent;
-}
-
 function incorrect() {
   countdown -= 15;
   next();
@@ -154,4 +103,49 @@ function next() {
   }
 
   document.getElementById("quizBody").innerHTML = quizContent;
+}
+
+//Endgame:
+function endGame() {
+  clearInterval(timer);
+
+  let quizContent =
+    ` <h2>Game over!</h2>
+<h3>You got a ` +
+    score +
+    ` /100!</h3>
+<h3>That means you got ` +
+    score / 20 +
+    ` questions correct!</h3>
+<input type="text" id="name" placeholder="Insert player name"> 
+<button onclick="submitScore()">Submit score!</button>`;
+
+  document.getElementById("quizBody").innerHTML = quizContent;
+}
+
+//submit and store the data in scores.html
+
+function submitPLayername(event) {
+  event.preventDefault();
+
+  var userInput = playername.value.trim();
+
+  playerscore = quizContent + score;
+
+  var ScoreBox = {
+    name: playername,
+    score: playerscore,
+  };
+  SaveData(ScoreBox);
+  window.location.href = "Code-Quiz/assets/html/scores.html";
+}
+
+function SaveData(data) {
+  let storage =
+    JSON.parse(localStorage.getItem("Code-Quiz/assets/html/scores.html")) || [];
+  storage.push(data);
+  localStorage.setItem(
+    "Code-Quiz/assets/html/scores.html",
+    JSON.stringify(storage)
+  );
 }
