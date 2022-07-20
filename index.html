@@ -14,6 +14,7 @@
   </head>
 
   <!-- Start Page -->
+  <!-- Header -->
   <body>
     <header>
       <h3 class="viewhighscores">View High Scores</h3>
@@ -21,8 +22,8 @@
     </header>
 
     <!-- Rules and Description -->
-    <div id="start">
-      <div class="description">
+    <div class="description">
+      <div class="cotainer description">
         <h1>Coding Quiz Challenge</h1>
         <p>
           Think you know all about coding. Take this quiz! You have 30 seconds
@@ -37,7 +38,7 @@
 
     <!-- Questions -->
     <div class="questions">
-      <div class="questionscontainer">
+      <div class="container questions">
         <div id="question"></div>
         <div id="answerbtn" class="btn-grid"></div>
       </div>
@@ -45,11 +46,11 @@
 
     <!-- Game over -->
     <div class="gameover">
-      <div class="gameovercontainer">
+      <div class="container gameover">
         <div id="leaderboard">
           <h1>Game over!</h1>
         </div>
-        <form id="initials-form" class="initials">
+        <form class="initialsform" class="initials">
           <p>
             Enter Initials:
             <input
@@ -58,7 +59,7 @@
               id="initials"
               class="text-input"
             />
-            <button class="endbtn" id="sumbit-score" type="submit">
+            <button class="endbtn" id="sumbitscore" type="submit">
               Submit
             </button>
           </p>
@@ -68,9 +69,9 @@
 
     <!-- High scores -->
     <div class="highscorecontainer">
-      <div class="highscores container">
+      <div class="highscore container">
         <h1 class="highscore">High Scores</h1>
-        <ol id="high-score-list" class="score-list"></ol>
+        <ol class="highscorelist" id="scorelist"></ol>
         <div>
           <button class="btn" id="back">Go back</button>
           <button class="btn" id="clearscores">Clear high scores</button>
