@@ -107,3 +107,62 @@ p {
 .hide {
   display: none;
 }
+
+/* Questions */
+#question {
+  color: var(--black);
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Highscores */
+#highscore {
+  text-align: left;
+}
+
+/*Button Styling */
+.btn {
+  background: var(--red);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px grey;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: var(--grey);
+  border-radius: 10px;
+  box-shadow: 0 2px grey;
+  cursor: pointer;
+}
+
+.btn:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 grey;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btngrid {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 5px;
+  margin: 20px 0;
+}
+
+.startend {
+  width: 25%;
+  margin-top: 10px;
+}
+
+.answerbtn {
+  width: 50%;
+  text-align: left;
+  font-size: 3vw;
+}
