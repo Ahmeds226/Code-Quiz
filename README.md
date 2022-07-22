@@ -9,4 +9,6 @@ Furthermore:
 
 Deployed URL: https://ahmeds226.github.io/Code-Quiz/
 
-<img src="assets/images/Screenshot 2022-05-04 at 20.12.45.png">
+## Preview
+
+<img src="./assets/images/preview.png" alt="">
