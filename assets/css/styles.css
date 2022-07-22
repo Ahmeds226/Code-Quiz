@@ -166,3 +166,50 @@ p {
   text-align: left;
   font-size: 3vw;
 }
+
+/* Correct and Incorrect styling */
+
+.banner {
+  font-size: 25px;
+  text-align: center;
+  font-style: italic;
+  margin: 0 100px;
+}
+
+.banner h2 {
+  border-top: 2px solid var(--red);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Leaderboard */
+
+ol {
+  list-style-type: number;
+}
+
+li {
+  font-size: 4vw;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1024px) {
+  .btn {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  #question {
+    font-size: 4.5vw;
+  }
+
+  h1 {
+    font-size: 4.5vw;
+  }
+
+  p {
+    font-size: 3vw;
+  }
+}
